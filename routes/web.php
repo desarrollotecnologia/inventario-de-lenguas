@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ForcedPasswordChangeController;
+use App\Http\Controllers\Auth\WorkcolbeefSsoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Decomisos\InspeccionSirtController;
 use App\Http\Controllers\Despacho\DespachoFinalizarInventarioController;
@@ -29,6 +30,7 @@ Route::get('/', function () {
 Route::middleware('guest')->group(function () {
     Route::view('/login', 'auth.login')->name('login');
     Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+    Route::get('/auth/sso/workcolbeef', WorkcolbeefSsoController::class)->name('auth.workcolbeef');
 });
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])

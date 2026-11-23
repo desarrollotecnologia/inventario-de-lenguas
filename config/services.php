@@ -35,4 +35,16 @@ return [
         ],
     ],
 
+    'workcolbeef' => [
+        'enabled' => env('WORKCOLBEEF_SSO_ENABLED', false),
+        'base_url' => env('WORKCOLBEEF_BASE_URL', 'http://127.0.0.1:8200'),
+        'exchange_path' => env('WORKCOLBEEF_SSO_EXCHANGE_PATH', '/api/sso/exchange'),
+        'client_id' => env('WORKCOLBEEF_SSO_CLIENT_ID', 'lenguas'),
+        'client_secret' => env('WORKCOLBEEF_SSO_CLIENT_SECRET', ''),
+        'audience' => env('WORKCOLBEEF_SSO_AUDIENCE', 'lenguas'),
+        'timeout' => env('WORKCOLBEEF_SSO_TIMEOUT_SECONDS', 5),
+        'provisioning_secret' => env('WORKCOLBEEF_PROVISIONING_SECRET', ''),
+        'provisioning_max_skew' => 300,
+    ],
+
 ];
